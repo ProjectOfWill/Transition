@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(255, 255, 255);
+        height: 2000px;
+        color: black;
+      }
+      ul {
+        font-weight: bold;
+      }
+      p {
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(124, 91, 91);
+        margin: 2px 0;
+      }
+      .container {
+        width: 600px;
+        border: 5px solid rgb(0, 0, 0);
+        margin: 50px auto;
+      }
+
+      .container:hover .box {
+        transform: rotate(720deg);
+        background-color: darkgreen;
+        margin-left: 500px;
+      }
+      .box1 {
+        transition: all 3s ease;
+      }
+      .box2 {
+        transition: all 3s ease-in;
+      }
+      .box3 {
+        transition: all 3s ease-out;
+      }
+      .box4 {
+        transition: all 3s ease-in-out;
+      }
+      .box5 {
+        transition: all 3s linear;
+      }
+      .box6 {
+        transition: all 3s cubic-bezier(0.165, -0.84, 0.44, 1);
+      }
+
+      /*Delay*/
+
+      .delay {
+        transition: 2s 1s; /* Durasi, Delay*/
+      }
+
+      .mix {
+        transition: margin-left 3s, transform 2s 2s, background-color 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Timing function (fungsi)</h1>
+    <div class="container">
+      <p>ease</p>
+      <div class="box box1"></div>
+      <p>ease-in</p>
+      <div class="box box2"></div>
+      <p>ease-out</p>
+      <div class="box box3"></div>
+      <p>ease-in-out</p>
+      <div class="box box4"></div>
+      <p>linear</p>
+      <div class="box box5"></div>
+      <p>cubic-bezier</p>
+      <div class="box box6"></div>
+    </div>
+
+    <!-- Delay -->
+    <h1>Delay</h1>
+    <div class="container">
+      <div class="box delay"></div>
+    </div>
+
+    <!-- Mix -->
+    <h1>Mix</h1>
+    <div class="container">
+      <div class="box mix"></div>
+    </div>
+
+    <!-- property yang dapat dianimasikan. -->
+    <h1>Animatable properti</h1>
+    <ul>
+      <li>Background-color</li>
+      <li>Background-size</li>
+      <li>Background-position</li>
+      <li>color</li>
+      <li>border</li>
+      <li>filter</li>
+      <li>font-size</li>
+      <li>line-height</li>
+      <li>top left bottom right</li>
+      <li>margin padding</li>
+      <li>width height</li>
+      <li>opacity</li>
+      <li>transform</li>
+      <li>word-spacing</li>
+      <li>letter-spacing</li>
+      <li>....</li>
+    </ul>
+  </body>
+</html>
